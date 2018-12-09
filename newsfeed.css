@@ -1,16 +1,6 @@
-/*body {
-    background-image: url(kampus.jpg);
-    background-repeat:  no-repeat;
-    height: 1080px;
-    width: 1920px;
-    background-position: center;
-    background-size: cover;
-}
-*/
 body {
     margin: 0;
     width: 1920px;
-   /* height: 1080px; */
 } 
 
 .content {
@@ -18,17 +8,14 @@ body {
     height: 2160px;
 }
 .marquee {
-  /* transform: translate(50%); */
     width: 1920px;
     height: 100%;   
     overflow: hidden;
-  /*  background: #ccc; */
     background-image: url(metropolia_tausta.jpg); 
 }
 
 
 .className {
-  /*  text-align: center;  */
     font-family: Arial;
     font-size: 2.6rem;
     padding: 1rem;
@@ -37,7 +24,17 @@ body {
     transform: translate(-50%);
     line-height: 4rem;
     color: #5e6168;
- /*   width: 70%; */
+}
+
+.link {
+  font-family: Arial;
+  font-size: 2.6rem;
+  padding: 1rem;
+  font-weight: bold;
+  margin-left: 50%;
+  transform: translate(-50%);
+  line-height: 4rem;
+  color: #f73302;
 }
 
 .titles {

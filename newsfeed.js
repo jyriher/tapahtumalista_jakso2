@@ -4,7 +4,7 @@ var mm = today.getMonth() + 1;
 var yyyy = today.getFullYear();
 
 $(document).ready(function () {
-	
+
 
 	var proxyosoite = 'http://users.metropolia.fi/~jyriher/newsfeed/proxy.php?url=';
 
@@ -22,13 +22,13 @@ $(document).ready(function () {
 		dataType: "xml",
 		success: function (data) {
 
-			$(data).find("entry").each(function () { 
+			$(data).find("entry").each(function () {
 				var el = $(this);
 
 				var list = { title: el.find("title").text(), description: el.find("summary").text() }
 
 				//created loop so that all wanted values would arrive
-				
+
 				$.each(list, function (index, value) {
 
 					//using regex rules to get rid of wrong looking umlauts:
@@ -41,7 +41,7 @@ $(document).ready(function () {
 					umlaut = umlaut.replace(/\&amp;/g, "&");
 					umlaut = umlaut.replace(/<br\s*[\/]?>/gi, "\n");
 
-					
+
 					//appending the result to class
 
 					$('<div/>', {
@@ -50,7 +50,7 @@ $(document).ready(function () {
 					}).appendTo('.content');
 
 
-					//adding class to every other value:
+					//adding class to every other value (so that css rules would affect just on them):
 
 					$(".className:even").addClass("titles");
 
@@ -79,10 +79,10 @@ setTimeout(function () {
 }, 15 * 60 * 1000);
 
 function updateClock() {
-	
+
 	$(".clock").html(new Date().toLocaleTimeString('it-IT'));
 
-    setTimeout(updateClock, 1000);
+	setTimeout(updateClock, 1000);
 
 };
 
